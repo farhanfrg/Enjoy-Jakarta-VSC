@@ -27,3 +27,11 @@ Contributing types: User Consents}
 Refresh requested types: Device Info, User Consents, Send Tab To Self, Encryption Keys}
 {"logTime": "1003/034602", "correlationVector":"Wbh2IU8V26Zwijcy6L5Fht.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_SoutheastAsia", "server":"GENERAL0100000J"}}
 {"logTime": "1003/034602", "correlationVector":"Wbh2IU8V26Zwijcy6L5Fht.2","action":"GetUpdates Response", "result":"SYNCER_OK", "context":Received 1 update(s). cV=Wbh2IU8V26Zwijcy6L5Fht.0;server=GENERAL0100000J;cloudType=Consumer;environment=Prod_SoutheastAsia}
+{"logTime": "1003/051601", "correlationVector":"1YnkQzpYuDhhnBADpD3J1R.0","action":"FeedSettingFetch_homeCloud", "result":"0", "context":{}}
+{"logTime": "1003/051601", "correlationVector":"W3N69P0T4lyJP/0Qb4TPyP.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_SoutheastAsia", "server":"GENERAL0100000N"}}
+{"logTime": "1003/051601", "correlationVector":"W3N69P0T4lyJP/0Qb4TPyP","action":"Initial GetUpdates", "result":"", "context":Reason: NEW_CLIENT. cV=W3N69P0T4lyJP/0Qb4TPyP}
+{"logTime": "1003/051601", "correlationVector":"W3N69P0T4lyJP/0Qb4TPyP.2","action":"GetUpdates Response", "result":"SYNCER_OK", "context":Received 1 update(s). cV=W3N69P0T4lyJP/0Qb4TPyP.0;server=GENERAL0100000N;cloudType=Consumer;environment=Prod_SoutheastAsia}
+{"logTime": "1003/051601", "correlationVector":"1qcNd/nmcxEj1KEOoCgjXf","action":"Normal GetUpdate request", "result":"", "context":cV=1qcNd/nmcxEj1KEOoCgjXf
+Refresh requested types: Device Info, User Consents, Send Tab To Self, Encryption Keys}
+{"logTime": "1003/051601", "correlationVector":"1qcNd/nmcxEj1KEOoCgjXf.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_SoutheastAsia", "server":"GENERAL0100000Z"}}
+{"logTime": "1003/051601", "correlationVector":"1qcNd/nmcxEj1KEOoCgjXf.2","action":"GetUpdates Response", "result":"SYNCER_OK", "context":Received 0 update(s). cV=1qcNd/nmcxEj1KEOoCgjXf.0;server=GENERAL0100000Z;cloudType=Consumer;environment=Prod_SoutheastAsia}

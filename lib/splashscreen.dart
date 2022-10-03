@@ -1,6 +1,5 @@
 import 'package:enjoyjakarta/theme_setup.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SplashScreenWidget extends StatefulWidget {
   final String title;
@@ -20,11 +19,14 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
             Column(children: [
               Image.asset(
                 'assets/images/initialSplash1.png',
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                alignment: Alignment.center,
               )
             ]),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(30, 50, 30, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(30, 50, 30, 0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,

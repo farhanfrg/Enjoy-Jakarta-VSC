@@ -1,4 +1,4 @@
-import 'package:enjoyjakarta/initial_splashscreen.dart';
+import 'package:enjoyjakarta/splashscreen.dart';
 import 'package:enjoyjakarta/theme_setup.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
