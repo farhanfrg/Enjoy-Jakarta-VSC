@@ -20,10 +20,10 @@ class _LoginScreen extends State<LoginScreen> {
       backgroundColor: Color(0xfffefafa),
       body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
               child: Image.asset(
                 'assets/images/mainlogo.png',
                 width: 288,

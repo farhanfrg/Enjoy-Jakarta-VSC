@@ -1,3 +1,4 @@
+import 'package:enjoyjakarta/sign_guest.dart';
 import 'package:enjoyjakarta/theme_setup.dart';
 import 'package:flutter/material.dart';
 
@@ -60,7 +61,11 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_forward, color: themeSetup.white),
         onPressed: () {
-          Navigator.pop(context);
+          // Navigator.pop(context);
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const SignGuest(title: "Guest Mode")));
         },
       ),
     );

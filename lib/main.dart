@@ -1,6 +1,8 @@
+import 'package:enjoyjakarta/sign_guest.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'splashscreen.dart';
+import 'sign_guest.dart';
 import 'theme_setup.dart' as themeSetup;
 
 void main() => runApp(const MyApp());
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
       ),
       // A widget which will be started on application startup
-      home: const LoginScreen(title: 'Enjoy Jakarta'),
+      home: const SignGuest(title: 'Enjoy Jakarta'),
     );
   }
 }
