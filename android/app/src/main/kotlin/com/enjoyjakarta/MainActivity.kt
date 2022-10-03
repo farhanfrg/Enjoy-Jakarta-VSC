@@ -1,0 +1,6 @@
+package com.enjoyjakarta
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
