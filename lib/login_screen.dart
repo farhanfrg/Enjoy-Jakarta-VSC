@@ -1,6 +1,7 @@
 import 'package:enjoyjakarta/splashscreen.dart';
 import 'package:enjoyjakarta/theme_setup.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:http/http.dart' as http;
 
 class LoginScreen extends StatefulWidget {
@@ -42,7 +43,7 @@ class _LoginScreen extends State<LoginScreen> {
                         color: themeSetup.mainTextColor,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w500,
-                        fontSize: 14),
+                        fontSize: 14.sp),
                   )
                 ],
               ),
@@ -64,7 +65,7 @@ class _LoginScreen extends State<LoginScreen> {
                       color: themeSetup.secondaryTextColor,
                       fontFamily: "Plus Jakarta",
                       fontWeight: FontWeight.w100,
-                      fontSize: 12),
+                      fontSize: 12.sp),
                   filled: true,
                   fillColor: themeSetup.textFieldColor,
                 ),
@@ -81,7 +82,7 @@ class _LoginScreen extends State<LoginScreen> {
                         color: themeSetup.mainTextColor,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w500,
-                        fontSize: 14),
+                        fontSize: 14.sp),
                   )
                 ],
               ),
@@ -103,7 +104,7 @@ class _LoginScreen extends State<LoginScreen> {
                       color: themeSetup.secondaryTextColor,
                       fontFamily: "Plus Jakarta",
                       fontWeight: FontWeight.w100,
-                      fontSize: 12),
+                      fontSize: 12.sp),
                   filled: true,
                   fillColor: themeSetup.textFieldColor,
                 ),
@@ -133,7 +134,7 @@ class _LoginScreen extends State<LoginScreen> {
                                 color: themeSetup.secondaryTextColor,
                                 fontFamily: "Plus Jakarta",
                                 fontWeight: FontWeight.w100,
-                                fontSize: 11),
+                                fontSize: 11.sp),
                             textAlign: TextAlign.left)
                       ],
                     ),
@@ -151,7 +152,7 @@ class _LoginScreen extends State<LoginScreen> {
                               color: themeSetup.alertColor,
                               fontFamily: "Plus Jakarta",
                               fontWeight: FontWeight.w100,
-                              fontSize: 11),
+                              fontSize: 11.sp),
                         )
                       ],
                     )
@@ -180,13 +181,13 @@ class _LoginScreen extends State<LoginScreen> {
                     // print('Response status: ${response.statusCode}');
                     // print('Response body: ${response.body}');
                   },
-                  child: const Text(
+                  child: Text(
                     "Login",
                     style: TextStyle(
                         color: themeSetup.white,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w600,
-                        fontSize: 16),
+                        fontSize: 16.sp),
                   ),
                 ),
               ),
@@ -202,7 +203,7 @@ class _LoginScreen extends State<LoginScreen> {
                         color: themeSetup.black,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w400,
-                        fontSize: 12),
+                        fontSize: 12.sp),
                   )
                 ],
               ),
@@ -236,7 +237,7 @@ class _LoginScreen extends State<LoginScreen> {
                             color: themeSetup.mainTextColor,
                             fontFamily: "Plus Jakarta",
                             fontWeight: FontWeight.w400,
-                            fontSize: 12),
+                            fontSize: 12.sp),
                       ),
                     ],
                   ),
@@ -270,13 +271,13 @@ class _LoginScreen extends State<LoginScreen> {
                       onPressed: () {
                         print("Button Pressed");
                       },
-                      child: const Text(
+                      child: Text(
                         "Login melalui Google",
                         style: TextStyle(
                             color: themeSetup.black,
                             fontFamily: "Plus Jakarta",
                             fontWeight: FontWeight.w600,
-                            fontSize: 12),
+                            fontSize: 12.sp),
                       ),
                     ),
                   ),
@@ -302,21 +303,21 @@ class _LoginScreen extends State<LoginScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
+                  Text(
                     "Tidak memiliki akun?",
                     style: TextStyle(
                         color: themeSetup.black,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w200,
-                        fontSize: 12),
+                        fontSize: 12.sp),
                   ),
-                  const Text(
+                  Text(
                     " Daftar Sekarang",
                     style: TextStyle(
                         color: themeSetup.blue,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w200,
-                        fontSize: 12),
+                        fontSize: 12.sp),
                   )
                 ],
               ),

@@ -3,6 +3,8 @@ import 'package:enjoyjakarta/main.dart';
 import 'package:enjoyjakarta/splashscreen.dart';
 import 'package:enjoyjakarta/theme_setup.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+import 'responsive.dart';
 
 class SignGuest extends StatefulWidget {
   final String title;
@@ -13,6 +15,8 @@ class SignGuest extends StatefulWidget {
 }
 
 class _SignGuestState extends State<SignGuest> {
+  var cardHeight = 27.h;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,15 +24,13 @@ class _SignGuestState extends State<SignGuest> {
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
-            Column(children: [
-              Image.asset(
-                'assets/images/initialSplash1.png',
-                fit: BoxFit.cover,
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                alignment: Alignment.center,
-              )
-            ]),
+            Image.asset(
+              'assets/images/initialSplash1.png',
+              fit: BoxFit.cover,
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              alignment: Alignment.center,
+            ),
             Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(30, 0, 30, 20),
                 child: Card(
@@ -36,82 +38,70 @@ class _SignGuestState extends State<SignGuest> {
                       borderRadius: BorderRadius.circular(16)),
                   elevation: 10,
                   child: SizedBox(
-                    height: 231,
-                    width: 343,
+                    height: cardHeight,
+                    width: double.infinity,
                     child: Padding(
                       padding: const EdgeInsets.all(20),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Text(
                             "Welcome",
                             style: TextStyle(
-                                color: themeSetup.black,
-                                fontFamily: "Plus Jakarta",
-                                fontWeight: FontWeight.w700,
-                                fontSize: 24),
+                              color: themeSetup.black,
+                              fontFamily: "Plus Jakarta",
+                              fontWeight: FontWeight.w700,
+                              fontSize: res.autoFont(cardHeight, 11),
+                            ),
                           ),
-                          SizedBox(height: 8),
                           Text(
                             "Explore Jakarta with us.",
                             style: TextStyle(
                                 color: themeSetup.black,
                                 fontFamily: "Plus Jakarta",
                                 fontWeight: FontWeight.w500,
-                                fontSize: 20),
+                                fontSize: res.autoFont(cardHeight, 9)),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: res.responsiver("h", cardHeight, 3),
                           ),
                           Container(
                             width: double.infinity,
-                            height: 45,
+                            height: res.responsiver("h", cardHeight, 22),
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   primary: themeSetup.accentColor),
                               onPressed: () {
                                 print("Button Pressed");
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const LoginScreen(
-                                            title: "Login Screen")));
+                                Navigator.push(context, routeToLoginScreen());
                               },
-                              child: const Text(
+                              child: Text(
                                 "Sign in",
                                 style: TextStyle(
                                     color: themeSetup.white,
                                     fontFamily: "Plus Jakarta",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 12),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: res.autoFont(cardHeight, 6)),
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: 10,
-                          ),
                           Container(
                             width: double.infinity,
-                            height: 45,
+                            height: res.responsiver("h", cardHeight, 22),
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   primary: themeSetup.white),
                               onPressed: () {
                                 print("Button Pressed");
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const SplashScreenWidget(
-                                                title: "Splash Screen")));
+                                Navigator.push(context, routeAsGuest());
                               },
-                              child: const Text(
+                              child: Text(
                                 "Login as guest",
                                 style: TextStyle(
                                     color: themeSetup.black,
                                     fontFamily: "Plus Jakarta",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 12),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: res.autoFont(cardHeight, 6)),
                               ),
                             ),
                           ),
@@ -125,4 +115,10 @@ class _SignGuestState extends State<SignGuest> {
       ),
     );
   }
+
+  MaterialPageRoute<dynamic> routeAsGuest() => MaterialPageRoute(
+      builder: (context) => const SplashScreenWidget(title: "Splash Screen"));
+
+  MaterialPageRoute<dynamic> routeToLoginScreen() => MaterialPageRoute(
+      builder: (context) => const LoginScreen(title: "Login Screen"));
 }

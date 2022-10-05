@@ -1,6 +1,8 @@
 import 'package:enjoyjakarta/sign_guest.dart';
 import 'package:enjoyjakarta/theme_setup.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+import 'responsive.dart';
 
 class SplashScreenWidget extends StatefulWidget {
   final String title;
@@ -27,7 +29,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
               )
             ]),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(30, 50, 30, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(30, 30, 30, 0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +40,8 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
                         color: themeSetup.white,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w700,
-                        fontSize: 40),
+                        fontSize: res.autoFont(100.h, 5)),
+                    maxLines: 3,
                   ),
                   SizedBox(
                     height: 15,
@@ -48,8 +51,9 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
                     style: TextStyle(
                         color: themeSetup.white,
                         fontFamily: "Plus Jakarta",
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16),
+                        fontWeight: FontWeight.w200,
+                        fontSize: res.autoFont(100.h, 2)),
+                    maxLines: 1,
                   ),
                 ],
               ),
@@ -62,12 +66,12 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
         child: Icon(Icons.arrow_forward, color: themeSetup.white),
         onPressed: () {
           // Navigator.pop(context);
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => const SignGuest(title: "Guest Mode")));
+          Navigator.push(context, routeToHomepage());
         },
       ),
     );
   }
+
+  MaterialPageRoute<dynamic> routeToHomepage() => MaterialPageRoute(
+      builder: (context) => const SignGuest(title: "Guest Mode"));
 }
