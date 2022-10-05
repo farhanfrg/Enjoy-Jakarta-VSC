@@ -2,7 +2,6 @@ import 'package:enjoyjakarta/splashscreen.dart';
 import 'package:enjoyjakarta/theme_setup.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:http/http.dart' as http;
 import 'responsive.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -124,13 +123,7 @@ class _LoginScreen extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Checkbox(
-                          onChanged: (bool? value) {
-                            if (value != null) {
-                              setState(() {
-                                this.rememberMe = value;
-                              });
-                            }
-                          },
+                          onChanged: (value) {},
                           value: this.rememberMe,
                         ),
                         Text("Ingat saya",
