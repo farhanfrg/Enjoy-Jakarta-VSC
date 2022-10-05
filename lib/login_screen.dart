@@ -3,6 +3,7 @@ import 'package:enjoyjakarta/theme_setup.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:http/http.dart' as http;
+import 'responsive.dart';
 
 class LoginScreen extends StatefulWidget {
   final String title;
@@ -19,12 +20,12 @@ class _LoginScreen extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xfffefafa),
-      body: SingleChildScrollView(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(0, 7.h, 0, 0),
               child: Image.asset(
                 'assets/images/mainlogo.png',
                 width: 288,
@@ -33,7 +34,7 @@ class _LoginScreen extends State<LoginScreen> {
               ),
             ), // Main Logo
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 30, 20, 10),
+              padding: EdgeInsetsDirectional.fromSTEB(2.5.h, 7.h, 2.5.h, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -43,14 +44,17 @@ class _LoginScreen extends State<LoginScreen> {
                         color: themeSetup.mainTextColor,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w500,
-                        fontSize: 14.sp),
+                        fontSize: res.autoFont(100.h, 2)),
                   )
                 ],
               ),
             ), // Email Text Field Label
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(2.5.h, 2.h, 2.5.h, 0),
               child: TextFormField(
+                style: TextStyle(
+                  fontSize: res.autoFont(100.h, 1.5),
+                ),
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.transparent),
@@ -65,14 +69,14 @@ class _LoginScreen extends State<LoginScreen> {
                       color: themeSetup.secondaryTextColor,
                       fontFamily: "Plus Jakarta",
                       fontWeight: FontWeight.w100,
-                      fontSize: 12.sp),
+                      fontSize: res.autoFont(100.h, 1.5)),
                   filled: true,
                   fillColor: themeSetup.textFieldColor,
                 ),
               ),
             ), // Email Text Field
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
+              padding: EdgeInsetsDirectional.fromSTEB(2.5.h, 2.h, 2.5.h, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -82,13 +86,13 @@ class _LoginScreen extends State<LoginScreen> {
                         color: themeSetup.mainTextColor,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w500,
-                        fontSize: 14.sp),
+                        fontSize: res.autoFont(100.h, 2)),
                   )
                 ],
               ),
             ), // Password Text Field Label
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(2.5.h, 2.h, 2.5.h, 0),
               child: TextFormField(
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
@@ -104,14 +108,14 @@ class _LoginScreen extends State<LoginScreen> {
                       color: themeSetup.secondaryTextColor,
                       fontFamily: "Plus Jakarta",
                       fontWeight: FontWeight.w100,
-                      fontSize: 12.sp),
+                      fontSize: res.autoFont(100.h, 1.5)),
                   filled: true,
                   fillColor: themeSetup.textFieldColor,
                 ),
               ),
             ), // Password Text Field
             Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(2.5.h, 2.h, 2.5.h, 0),
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
@@ -134,7 +138,7 @@ class _LoginScreen extends State<LoginScreen> {
                                 color: themeSetup.secondaryTextColor,
                                 fontFamily: "Plus Jakarta",
                                 fontWeight: FontWeight.w100,
-                                fontSize: 11.sp),
+                                fontSize: res.autoFont(100.h, 1.5)),
                             textAlign: TextAlign.left)
                       ],
                     ),
@@ -152,17 +156,17 @@ class _LoginScreen extends State<LoginScreen> {
                               color: themeSetup.alertColor,
                               fontFamily: "Plus Jakarta",
                               fontWeight: FontWeight.w100,
-                              fontSize: 11.sp),
+                              fontSize: res.autoFont(100.h, 1.5)),
                         )
                       ],
                     )
                   ],
                 )), // Alert
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(2.5.h, 2.h, 2.5.h, 0),
               child: Container(
                 width: double.infinity,
-                height: 45,
+                height: res.responsiver("h", 100.h, 5),
                 child: ElevatedButton(
                   onPressed: () async {
                     Navigator.push(
@@ -187,13 +191,13 @@ class _LoginScreen extends State<LoginScreen> {
                         color: themeSetup.white,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w600,
-                        fontSize: 16.sp),
+                        fontSize: res.autoFont(100.h, 2)),
                   ),
                 ),
               ),
             ), //Login Button
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(2.5.h, 2.h, 2.5.h, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -203,13 +207,13 @@ class _LoginScreen extends State<LoginScreen> {
                         color: themeSetup.black,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w400,
-                        fontSize: 12.sp),
+                        fontSize: res.autoFont(100.h, 1.5)),
                   )
                 ],
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+              padding: EdgeInsetsDirectional.fromSTEB(2.5.h, 2.h, 2.5.h, 0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -237,7 +241,7 @@ class _LoginScreen extends State<LoginScreen> {
                             color: themeSetup.mainTextColor,
                             fontFamily: "Plus Jakarta",
                             fontWeight: FontWeight.w400,
-                            fontSize: 12.sp),
+                            fontSize: res.autoFont(100.h, 1.5)),
                       ),
                     ],
                   ),
@@ -258,13 +262,13 @@ class _LoginScreen extends State<LoginScreen> {
               ),
             ), // Atau Divider
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(2.5.h, 2.h, 2.5.h, 0),
               child: Stack(
                 alignment: Alignment.centerLeft,
                 children: [
                   Container(
                     width: double.infinity,
-                    height: 45,
+                    height: res.responsiver("h", 100.h, 5),
                     child: ElevatedButton(
                       style:
                           ElevatedButton.styleFrom(primary: themeSetup.white),
@@ -277,7 +281,7 @@ class _LoginScreen extends State<LoginScreen> {
                             color: themeSetup.black,
                             fontFamily: "Plus Jakarta",
                             fontWeight: FontWeight.w600,
-                            fontSize: 12.sp),
+                            fontSize: res.autoFont(100.h, 1.5)),
                       ),
                     ),
                   ),
@@ -299,7 +303,7 @@ class _LoginScreen extends State<LoginScreen> {
               ),
             ), // Google Login Divider
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(2.5.h, 2.h, 2.5.h, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -309,7 +313,7 @@ class _LoginScreen extends State<LoginScreen> {
                         color: themeSetup.black,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w200,
-                        fontSize: 12.sp),
+                        fontSize: res.autoFont(100.h, 1.5)),
                   ),
                   Text(
                     " Daftar Sekarang",
@@ -317,7 +321,7 @@ class _LoginScreen extends State<LoginScreen> {
                         color: themeSetup.blue,
                         fontFamily: "Plus Jakarta",
                         fontWeight: FontWeight.w200,
-                        fontSize: 12.sp),
+                        fontSize: res.autoFont(100.h, 1.5)),
                   )
                 ],
               ),

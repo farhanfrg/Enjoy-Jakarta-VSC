@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.orange,
           ),
           // A widget which will be started on application startup
-          home: const SignGuest(title: 'Enjoy Jakarta'),
+          home: const LoginScreen(title: 'Enjoy Jakarta'),
         );
       },
     );

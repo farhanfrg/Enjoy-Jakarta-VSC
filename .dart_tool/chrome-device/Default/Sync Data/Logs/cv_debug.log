@@ -109,3 +109,11 @@ Refresh requested types: Device Info, User Consents, Send Tab To Self, Encryptio
 Refresh requested types: Device Info, User Consents, Send Tab To Self, Encryption Keys}
 {"logTime": "1005/061204", "correlationVector":"3bTaeEoMz4oIRQR4vNXiUv.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_SoutheastAsia", "server":"GENERAL01000009"}}
 {"logTime": "1005/061204", "correlationVector":"3bTaeEoMz4oIRQR4vNXiUv.2","action":"GetUpdates Response", "result":"SYNCER_OK", "context":Received 0 update(s). cV=3bTaeEoMz4oIRQR4vNXiUv.0;server=GENERAL01000009;cloudType=Consumer;environment=Prod_SoutheastAsia}
+{"logTime": "1005/084308", "correlationVector":"U8pqeSlTzKhAU/QrgQM9QY.0","action":"FeedSettingFetch_homeCloud", "result":"0", "context":{}}
+{"logTime": "1005/084308", "correlationVector":"JtQRyKz9IQ6KOx+uJDbTlr.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_SoutheastAsia", "server":"GENERAL0100000K"}}
+{"logTime": "1005/084308", "correlationVector":"JtQRyKz9IQ6KOx+uJDbTlr","action":"Initial GetUpdates", "result":"", "context":Reason: NEW_CLIENT. cV=JtQRyKz9IQ6KOx+uJDbTlr}
+{"logTime": "1005/084308", "correlationVector":"JtQRyKz9IQ6KOx+uJDbTlr.2","action":"GetUpdates Response", "result":"SYNCER_OK", "context":Received 1 update(s). cV=JtQRyKz9IQ6KOx+uJDbTlr.0;server=GENERAL0100000K;cloudType=Consumer;environment=Prod_SoutheastAsia}
+{"logTime": "1005/084308", "correlationVector":"vIc2eAXGTdiuDMO11zEL5F","action":"Normal GetUpdate request", "result":"", "context":cV=vIc2eAXGTdiuDMO11zEL5F
+Refresh requested types: Device Info, User Consents, Send Tab To Self, Encryption Keys}
+{"logTime": "1005/084308", "correlationVector":"vIc2eAXGTdiuDMO11zEL5F.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_SoutheastAsia", "server":"GENERAL0100000H"}}
+{"logTime": "1005/084308", "correlationVector":"vIc2eAXGTdiuDMO11zEL5F.2","action":"GetUpdates Response", "result":"SYNCER_OK", "context":Received 0 update(s). cV=vIc2eAXGTdiuDMO11zEL5F.0;server=GENERAL0100000H;cloudType=Consumer;environment=Prod_SoutheastAsia}
